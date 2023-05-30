@@ -25,7 +25,7 @@ const Task: FC = () => {
       value: ResourceStatus.NEW_RESOURCE,
       name: '新资源',
       // count: processStatusMap[ResourceStatus.NEW_RESOURCE],
-      count: 0
+      count: 113
     },
     {
       value: ResourceStatus.PENDING_REVIEW,

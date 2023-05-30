@@ -1,0 +1,51 @@
+@import '@/styles/mixin.less';
+@pretty: ~'@{prefix}-process-tab';
+
+.@{pretty} {
+  width: 320px;
+  background: var(--bg-3);
+  z-index: 1;
+  border-bottom: 1px solid var(--line-tint);
+
+  .ant-tabs-nav::before {
+    border-bottom: none;
+  }
+
+  .ant-tabs-ink-bar {
+    visibility: hidden;
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 0;
+
+    .ant-tabs-nav-wrap {
+      padding: 16px;
+      height: 56px;
+
+      .ant-tabs-tab {
+        margin-bottom: 0;
+        margin-top: 0;
+        font-size: 12px;
+        line-height: 18px;
+        min-width: auto;
+        color: var(--text-color-1) !important;
+        border-radius: 6px;
+
+        &:not(:first-of-type) {
+          margin-left: 16px;
+        }
+
+        &-active {
+          background-color: var(--primary-color-tint-hover);
+          color: var(--br50);
+
+          ant-tabs-nav-list .ant-tabs-tab-btn-inner {
+            .active {
+              color: var(--br50) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
