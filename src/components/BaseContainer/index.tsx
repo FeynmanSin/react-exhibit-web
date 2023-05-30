@@ -2,9 +2,11 @@ import { FC, PropsWithChildren, ReactNode } from 'react';
 
 import { prettyCls } from '@/utils/prettyCls';
 
+import cn from 'classnames';
 import './index.less'
 
 const cls = prettyCls('base');
+
 
 const BaseContainer: FC<PropsWithChildren<{
   detail: ReactNode;
@@ -15,7 +17,7 @@ const BaseContainer: FC<PropsWithChildren<{
   children
 }) => {
     return (
-      <div className={cls()}>
+      <div className={cn(cls(), className)}>
         <div className={cls('detail')}>
           {detail}
         </div>

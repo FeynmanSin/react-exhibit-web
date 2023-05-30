@@ -2,7 +2,25 @@
 @pretty :~'@{prefix}-base';
 
 .@{pretty} {
-  background-color: red;
   position: relative;
   height: 100%;
+
+  &-list {
+    height: 100%;
+    background-color: var(--bg-3);
+    width: 320px;
+    position: relative;
+  }
+
+  &-detail {
+    position: absolute;
+    left: 320px;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
+    &__show {
+      left: 320px;
+    }
+  }
 }
