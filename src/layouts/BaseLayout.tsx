@@ -1,9 +1,8 @@
-import React, { FC } from 'react'
+import { FC, useMemo } from 'react'
 import { prettyCls } from '@/utils/prettyCls';
-import { NavLink, Outlet } from 'umi';
-import classNames from 'classnames';
+import { NavLink, Outlet, useLocation } from 'umi';
+import cn from 'classnames';
 import { CarryOutOutlined, FolderOutlined } from '@ant-design/icons';
-
 import './BaseLayout.less';
 
 const cls = prettyCls('main');
@@ -23,14 +22,18 @@ const navigationList = [
 ];
 
 const BaseLayout: FC = () => {
+
+  const location = useLocation();
+  const activeKey = useMemo(() => location.pathname, [location]);//当前路由地址
+
   return (
     <main className={cls()}>
       <nav className={cls('nav')}>
         {
           navigationList.map(({ to, name, type, Icon }) => (
-            <NavLink className={cls('nav-item')} to={to} key={type}>
+            <NavLink className={cn(cls('nav-item'), { active: activeKey === to })} to={to} key={type}>
               <Icon size={20} />
-              <span>{name}</span>
+              <span className="mt-1 text-sm">{name}</span>
             </NavLink>
           ))
         }

@@ -2,4 +2,41 @@
   height: 100%;
   display: flex;
   background-color: var(--bg-1);
+
+  &-content {
+    height: 100%;
+    flex: 1;
+    border-radius: 8px 0px 0px 0px;
+    overflow: hidden;
+  }
+
+  &-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-1);
+    height: 100%;
+    padding-top: 12px;
+    width: 64px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 8px;
+      width: 52px;
+      height: 52px;
+      color: var(--text-color-3);
+      border-radius: 6px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.active {
+        color: var(--br50);
+        background: var(--primary-color-tint-hover);
+      }
+    }
+  }
 }

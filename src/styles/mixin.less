@@ -1,0 +1,27 @@
+@prefix: exhibit;
+
+.scrollbar(@track-color: transparent; @thumb-color: rgba(153, 153, 153, 0.4); @width: 8px; @height: 8px; @hover-color: rgba(153, 153, 153, 1)) {
+  &::-webkit-scrollbar {
+    width: @width;
+    height: @height;
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: @track-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: @thumb-color;
+    border-radius: var(--border-radius-base);
+    transition: opacity 0.2s;
+
+    &:hover {
+      background: @hover-color;
+    }
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

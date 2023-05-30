@@ -1,4 +1,4 @@
-import { Link, Outlet } from 'umi';
+import { Outlet } from 'umi';
 import { ConfigProvider } from 'antd';
 import './index.less';
 
