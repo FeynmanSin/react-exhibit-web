@@ -1,7 +1,6 @@
-import { FC } from 'react';
-import { Tabs } from 'antd';
+import { FC, useState, useEffect } from 'react';
+import { TabsProps, Tabs } from 'antd'
 import cn from 'classnames';
-
 
 import { prettyCls } from '@/utils/prettyCls';
 
@@ -9,39 +8,44 @@ import './index.less';
 
 const cls = prettyCls('process-tab');
 
+
 const ProcessTab: FC<{
   navigationList: {
-    value: number;
-    name: string;
+    key: number;
+    label: string;
     count?: number;
   }[];
-}> = ({ navigationList }) => {
-  return (
-    <Tabs
-      className={cls()}
-    // activeKey={tabsProps?.activeKey}
-    // {...tabsProps}
-    // onChange={handleOnChange}
-    >
-      {navigationList.map(({ value, name, count = 0 }) => (
-        <Tabs.TabPane
-          key={value}
-          tab={(
+  tabsProps: TabsProps;
+}> = ({ navigationList, tabsProps }) => {
+  const [items, setItems] = useState<TabsProps['items']>();
+  useEffect(() => {
+    getItems();
+  }, [navigationList, tabsProps]);
+
+  const getItems = () => {
+    const _items = navigationList.map((item) => {
+      if (item?.count && item.count > 0) {
+        return {
+          key: String(item.key),
+          label: (
             <span>
-              {name}
-              {count > 0 ? (
-                <span
-                  // className={cn('ml-1', value === Number(tabsProps.activeKey) ? 'text-br50' : 'text-color-3')}
-                  className={cn('ml-1', 'text-color-3')}
-                >
-                  {count}
-                </span>
-              ) : null}
+              {item.label}
+              <span
+                className={cn('ml-1', item.key === Number(tabsProps.activeKey) ? 'text-br50' : 'text-color-3')}
+              >
+                {item.count}
+              </span>
             </span>
-          )}
-        />
-      ))}
-    </Tabs>
+          )
+        }
+      }
+      return { key: String(item.key), label: item.label };
+    });
+    setItems(_items);
+  }
+
+  return (
+    <Tabs className={cls()} items={items} tabBarGutter={16} />
   )
 }
 

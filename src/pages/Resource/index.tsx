@@ -18,33 +18,33 @@ const Task: FC = () => {
 
   const navigationList = useMemo(() => [
     {
-      value: ResourceStatus.ALL,
-      name: '全部',
+      key: ResourceStatus.ALL,
+      label: '全部',
     },
     {
-      value: ResourceStatus.NEW_RESOURCE,
-      name: '新资源',
+      key: ResourceStatus.NEW_RESOURCE,
+      label: '新资源',
       // count: processStatusMap[ResourceStatus.NEW_RESOURCE],
-      count: 113
+      count: 113,
     },
     {
-      value: ResourceStatus.PENDING_REVIEW,
-      name: '待审核',
+      key: ResourceStatus.PENDING_REVIEW,
+      label: '待审核',
       // count: processStatusMap[ResourceStatus.PENDING_REVIEW],
-      count: 0
+      count: 44
 
 
     },
     {
-      value: ResourceStatus.UNDER_REVIEW,
-      name: '审核中',
+      key: ResourceStatus.UNDER_REVIEW,
+      label: '审核中',
       // count: processStatusMap[ResourceStatus.UNDER_REVIEW],
-      count: 0
+      count: 300
 
     },
     {
-      value: ResourceStatus.Approved,
-      name: '已审核',
+      key: ResourceStatus.Approved,
+      label: '已审核',
     },
     // ], [processStatusMap]);
   ], []);
@@ -54,6 +54,11 @@ const Task: FC = () => {
     <BaseContainer detail={<Detail />} className={cls()}>
       <ProcessTab
         navigationList={navigationList}
+        tabsProps={
+          {
+            activeKey: 0
+          }
+        }
       />
       <List />
     </BaseContainer>
