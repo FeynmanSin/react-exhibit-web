@@ -1,6 +1,7 @@
 import 'umi/typings';
 declare global {
   declare interface Window {
-    theme: number
+    theme: number,
+    store: any
   }
 }
