@@ -3,6 +3,9 @@ import { Outlet } from 'umi';
 import { ConfigProvider } from 'antd';
 import './index.less';
 import useTheme from './hooks/useTheme';
+import { darkTheme } from './themeToken';
+
+
 
 export default function Layout() {
   const { theme, onThemeChange } = useTheme();
@@ -12,8 +15,12 @@ export default function Layout() {
   }, [])
 
   return (
-    <ConfigProvider>
+    <ConfigProvider
+      theme={{
+        token: darkTheme
+      }}
+    >
       <Outlet />
-    </ConfigProvider>
+    </ConfigProvider >
   );
 }

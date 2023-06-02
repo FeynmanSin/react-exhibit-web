@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.9.5
     version: registry.npmjs.org/@reduxjs/toolkit@1.9.5(react-redux@8.0.5)(react@18.2.0)
   antd:
-    specifier: ^5.5.1
-    version: registry.npmjs.org/antd@5.5.1(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^5.5.2
+    version: registry.npmjs.org/antd@5.5.2(react-dom@18.2.0)(react@18.2.0)
   axios:
     specifier: ^1.4.0
     version: registry.npmjs.org/axios@1.4.0
@@ -1757,11 +1757,11 @@ packages:
       webpack: registry.npmjs.org/webpack@5.84.1
     dev: false
 
-  registry.npmjs.org/@rc-component/color-picker@1.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-MKYqgEncpISQiZIaj8ykcdzZewgjslEfDo2iHg627jPnt+DbWIKG1T8MS55qXjuxkokgL0cNueyGnOndfaaNKw==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rc-component/color-picker/-/color-picker-1.1.1.tgz}
-    id: registry.npmjs.org/@rc-component/color-picker/1.1.1
+  registry.npmjs.org/@rc-component/color-picker@1.2.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-IitJ6RWGHs7btI1AqzGPrehr5bueWLGDUyMKwDwvFunfSDo/o8g/95kUG55vC5EYLM0ZJ3SDfw45OrW5KAx3oA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@rc-component/color-picker/-/color-picker-1.2.0.tgz}
+    id: registry.npmjs.org/@rc-component/color-picker/1.2.0
     name: '@rc-component/color-picker'
-    version: 1.1.1
+    version: 1.2.0
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -3261,11 +3261,11 @@ packages:
       color-convert: registry.npmjs.org/color-convert@2.0.1
     dev: false
 
-  registry.npmjs.org/antd@5.5.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-H9vPVGQ/8fT9Zidl4fzMSVAOCDIe/ZQtiU2hDzrN2tqAbaxOet+1HqfoKv7dfy+e0ttKIFvs6Y2yWw/ign1MwQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/antd/-/antd-5.5.1.tgz}
-    id: registry.npmjs.org/antd/5.5.1
+  registry.npmjs.org/antd@5.5.2(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-qILOJj7QPLy/PHQIyPHEW6kto6okw+epumlcC01jL+Sph0HBX109MWaLDXAsgc3+WEH1haEffqw9vyZ4KYfk0Q==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/antd/-/antd-5.5.2.tgz}
+    id: registry.npmjs.org/antd/5.5.2
     name: antd
-    version: 5.5.1
+    version: 5.5.2
     peerDependencies:
       react: '>=16.9.0'
       react-dom: '>=16.9.0'
@@ -3276,7 +3276,7 @@ packages:
       '@ant-design/react-slick': registry.npmjs.org/@ant-design/react-slick@1.0.1(react@18.2.0)
       '@babel/runtime': registry.npmjs.org/@babel/runtime@7.21.0
       '@ctrl/tinycolor': registry.npmjs.org/@ctrl/tinycolor@3.6.0
-      '@rc-component/color-picker': registry.npmjs.org/@rc-component/color-picker@1.1.1(react-dom@18.2.0)(react@18.2.0)
+      '@rc-component/color-picker': registry.npmjs.org/@rc-component/color-picker@1.2.0(react-dom@18.2.0)(react@18.2.0)
       '@rc-component/mutate-observer': registry.npmjs.org/@rc-component/mutate-observer@1.0.0(react-dom@18.2.0)(react@18.2.0)
       '@rc-component/tour': registry.npmjs.org/@rc-component/tour@1.8.0(react-dom@18.2.0)(react@18.2.0)
       '@rc-component/trigger': registry.npmjs.org/@rc-component/trigger@1.13.3(react-dom@18.2.0)(react@18.2.0)
@@ -3290,7 +3290,7 @@ packages:
       rc-dialog: registry.npmjs.org/rc-dialog@9.1.0(react-dom@18.2.0)(react@18.2.0)
       rc-drawer: registry.npmjs.org/rc-drawer@6.1.6(react-dom@18.2.0)(react@18.2.0)
       rc-dropdown: registry.npmjs.org/rc-dropdown@4.1.0(react-dom@18.2.0)(react@18.2.0)
-      rc-field-form: registry.npmjs.org/rc-field-form@1.31.0(react-dom@18.2.0)(react@18.2.0)
+      rc-field-form: registry.npmjs.org/rc-field-form@1.32.0(react-dom@18.2.0)(react@18.2.0)
       rc-image: registry.npmjs.org/rc-image@5.16.0(react-dom@18.2.0)(react@18.2.0)
       rc-input: registry.npmjs.org/rc-input@1.0.4(react-dom@18.2.0)(react@18.2.0)
       rc-input-number: registry.npmjs.org/rc-input-number@7.4.2(react-dom@18.2.0)(react@18.2.0)
@@ -8739,11 +8739,11 @@ packages:
       react-dom: registry.npmjs.org/react-dom@18.2.0(react@18.2.0)
     dev: false
 
-  registry.npmjs.org/rc-field-form@1.31.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-3u6crithuSQMfHaDL3rMvzjG5oXJQIgCTxDfT0pJL9kI/C2LWuR8GrApzOvB9gKcf8VvvnejzmSPnsUJz4YGmQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/rc-field-form/-/rc-field-form-1.31.0.tgz}
-    id: registry.npmjs.org/rc-field-form/1.31.0
+  registry.npmjs.org/rc-field-form@1.32.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-vr5pA0/gWiBZf0HKdevQJcWSsAac10Z8Nj1Brs3OOCnExk7l+u8GtsW+4cRSqJLug5fxV11dOGXpxf7+aHT/2A==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/rc-field-form/-/rc-field-form-1.32.0.tgz}
+    id: registry.npmjs.org/rc-field-form/1.32.0
     name: rc-field-form
-    version: 1.31.0
+    version: 1.32.0
     engines: {node: '>=8.x'}
     peerDependencies:
       react: '>=16.9.0'
