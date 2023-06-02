@@ -6,8 +6,9 @@ import { prettyCls } from '@/utils/prettyCls';
 
 import './index.less';
 
-const cls = prettyCls('process-tab');
 
+
+const cls = prettyCls('process-tab');
 
 const ProcessTab: FC<{
   navigationList: {
@@ -44,8 +45,21 @@ const ProcessTab: FC<{
     setItems(_items);
   }
 
+  const handleChange: TabsProps['onChange'] = (key) => {
+    if (tabsProps?.onChange) {
+      tabsProps.onChange(key);
+    }
+  }
+
   return (
-    <Tabs className={cls()} items={items} tabBarGutter={16} />
+    <Tabs
+      className={cls()}
+      items={items}
+      tabBarGutter={16}
+      activeKey={tabsProps.activeKey}
+      onChange={handleChange}
+      {...tabsProps}
+    />
   )
 }
 

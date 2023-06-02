@@ -1,4 +1,4 @@
-import { FC, useMemo } from 'react';
+import { FC, useMemo, useState } from 'react';
 
 import './index.less';
 
@@ -17,6 +17,7 @@ const cls = prettyCls('resource');
 
 const Task: FC = () => {
 
+  const [activeKey, setActiveKey] = useState(3);
   const navigationList = useMemo(() => [
     {
       key: ResourceStatus.ALL,
@@ -57,7 +58,8 @@ const Task: FC = () => {
         navigationList={navigationList}
         tabsProps={
           {
-            activeKey: 0
+            activeKey: `${activeKey}`,
+            onChange: (key) => { setActiveKey(Number(key)) }
           }
         }
       />
