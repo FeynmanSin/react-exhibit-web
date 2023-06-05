@@ -25,12 +25,14 @@ const analytics = getAnalytics(app);
 const db = getFirestore(app);
 
 // todo: 请求hooks
-const useRequest = (url: string) => {
+const useRequest = (url: string, immediate: boolean = true) => {
   const [isLoading, setIsLoading] = useState(true);
   const [resData, setResData] = useState<any>();
   useEffect(() => {
-    get();
-  }, []);
+    if (immediate) {
+      get();
+    }
+  }, [url]);
 
   const get = async () => {
     const querySnapshot = await getDocs(collection(db, url));

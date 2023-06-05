@@ -14,7 +14,8 @@ export default function Layout() {
   const { resData, isLoading } = useRequest('personalSettings');
   useEffect(() => {
     onThemeChange(resData?.extra.theme);
-  }, [resData])
+  }, [resData]);
+
   return (
     <ConfigProvider
       theme={{
