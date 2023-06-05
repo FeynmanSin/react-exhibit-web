@@ -6,15 +6,15 @@ import './index.less';
 import useTheme from './hooks/useTheme';
 import { darkTheme } from './themeToken';
 import store from '@/store';
+import useRequest from '../hooks/useRequest';
 
 
 export default function Layout() {
   const { theme, onThemeChange } = useTheme();
-  // 暂时写死系统模式 后端接口未开发 
+  const { resData, isLoading, get, put } = useRequest('personalSettings');
   useEffect(() => {
-    onThemeChange(0);
-  }, [])
-
+    onThemeChange(resData?.extra.theme);
+  }, [resData])
   return (
     <ConfigProvider
       theme={{

@@ -11,4 +11,4 @@ const resourceSlice = createSlice({
   reducers: {},
 });
 
-export default resourceSlice
+export default resourceSlice;

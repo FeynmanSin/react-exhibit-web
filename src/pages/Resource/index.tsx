@@ -14,7 +14,6 @@ import Detail from './components/Detail';
 
 const cls = prettyCls('resource');
 
-
 const Task: FC = () => {
 
   const [activeKey, setActiveKey] = useState(3);
