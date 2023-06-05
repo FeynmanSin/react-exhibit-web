@@ -37,13 +37,15 @@ const useRequest = (url: string) => {
     querySnapshot.forEach((doc) => {
       setResData(doc.data());
     });
+    setIsLoading(false);
   }
 
-  const post = () => {
-    // addDoc(collection(db,))
+  const post = (data: object) => {
+
   }
   const put = async (data: object) => {
     await updateDoc(doc(db, url, "SiNyqVRVtLTEqT7CbfjwCjxNlSJ2"), data);
+    setIsLoading(false);
 
   }
 

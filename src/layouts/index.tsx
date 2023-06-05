@@ -11,7 +11,7 @@ import useRequest from '../hooks/useRequest';
 
 export default function Layout() {
   const { theme, onThemeChange } = useTheme();
-  const { resData, isLoading, get, put } = useRequest('personalSettings');
+  const { resData, isLoading } = useRequest('personalSettings');
   useEffect(() => {
     onThemeChange(resData?.extra.theme);
   }, [resData])
@@ -22,7 +22,9 @@ export default function Layout() {
       }}
     >
       <Provider store={store}>
-        <Outlet />
+        {
+          !isLoading && <Outlet />
+        }
       </Provider>
     </ConfigProvider >
   );
