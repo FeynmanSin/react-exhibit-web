@@ -11,3 +11,9 @@ export enum ResourceStatus {
   // 已审核
   Approved = 4,
 }
+
+export enum HelperTypeEnum {
+  TASK = 'TASK',
+  ASSET = 'ASSET',
+  FEEDBACK = 'FEEDBACK',
+}

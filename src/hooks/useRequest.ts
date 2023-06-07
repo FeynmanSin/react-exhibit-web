@@ -46,8 +46,8 @@ const useRequest = (url: string, immediate: boolean = true) => {
 
   }
   const put = async (data: object) => {
-    await updateDoc(doc(db, url, "SiNyqVRVtLTEqT7CbfjwCjxNlSJ2"), data);
-    setIsLoading(false);
+    // await updateDoc(doc(db, url, "SiNyqVRVtLTEqT7CbfjwCjxNlSJ2"), data);
+    // setIsLoading(false);
 
   }
 
