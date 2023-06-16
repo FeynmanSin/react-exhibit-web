@@ -7,6 +7,7 @@ import { prettyCls } from '@/utils/prettyCls';
 import { ResourceStatus } from '@/types/resource';
 import { Button } from 'antd';
 
+import Upload from '@/components/Upload';
 import BaseContainer from '@/components/BaseContainer';
 import ProcessTab from '@/components/ProcessTab';
 import List from './components/List';
@@ -15,7 +16,8 @@ import { useTypedSelector } from '@/store/reducers';
 import { useAppDispatch } from '@/store';
 import {
   updateCurrentTab,
-  fetchStatusMap
+  fetchStatusMap,
+  getGroupViewSetting
 } from '@/store/reducers/resource';
 
 
@@ -59,12 +61,12 @@ const Resource: FC = () => {
 
   useEffect(() => {
     // 只有user存在时候才能进行资源列表fetch
-    console.log(">>>>>activeKey", activeKey)
+    // console.log(">>>>>activeKey", activeKey)
     if (activeKey) {
       // 获取头部状态
       // preFetchList();
       dispatch(fetchStatusMap());
-      // dispatch(getGroupViewSetting(Number(activeKey))).unwrap()
+      dispatch(getGroupViewSetting(Number(activeKey)))
       //   .then(() => {
       //     fetchResourceListRef.current = dispatch(fetchResourceList());
       //   });
@@ -86,6 +88,7 @@ const Resource: FC = () => {
       />
       <List />
       <Button>111</Button>
+      <Upload />
     </BaseContainer>
   )
 }

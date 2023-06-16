@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet } from 'umi';
 import { ConfigProvider } from 'antd';
 import { Provider } from 'react-redux';
@@ -6,15 +6,19 @@ import './index.less';
 import useTheme from './hooks/useTheme';
 import { darkTheme } from './themeToken';
 import store from '@/store';
-import useRequest from '../hooks/useRequest';
+import personalSettings from '@/apis/personalSettings';
 
 
 export default function Layout() {
   const { theme, onThemeChange } = useTheme();
-  const { resData, isLoading } = useRequest('personalSettings');
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    onThemeChange(resData?.extra.theme);
-  }, [resData]);
+    ; (async function () {
+      const res = await personalSettings.getPersonalSettings();
+      setIsLoading(false);
+      onThemeChange(res?.extra.theme);
+    })();
+  }, [theme]);
 
   return (
     <ConfigProvider

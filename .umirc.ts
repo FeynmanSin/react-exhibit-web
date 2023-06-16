@@ -21,6 +21,15 @@ export default defineConfig({
       ]
     },
   ],
+  proxy: {
+    '/api': {
+      target: 'http://localhost:8081',
+      // target: 'http://192.168.1.108:8081/',
+      changeOrigin: true,
+      pathRewrite: { '^/api': '' },
+    }
+  },
+  mock: false,
   npmClient: 'pnpm',
   hash: true,
   extraPostCSSPlugins: [require("tailwindcss")({ config: "tailwind.config.js" })],

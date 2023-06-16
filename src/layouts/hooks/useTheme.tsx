@@ -1,15 +1,14 @@
 import { useState } from 'react';
 import { Theme, changeTheme } from '@/utils/theme';
-import useRequest from '../../hooks/useRequest';
+import personalSettings from '@/apis/personalSettings';
 
 
 export default function useTheme() {
   const [theme, setTheme] = useState<Theme>(window.theme !== undefined ? window.theme : Theme.dark);
-  const { resData, put: updateTheme } = useRequest('personalSettings', false);
   const onThemeChange = (val: Theme) => {
     setTheme(val);
     changeTheme(val);
-    updateTheme({ extra: { theme: theme } });
+    personalSettings.updatePersonalSettings(theme);
   }
   return { theme, onThemeChange }
 }
