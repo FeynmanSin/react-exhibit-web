@@ -34,3 +34,4 @@ export default defineConfig({
   hash: true,
   extraPostCSSPlugins: [require("tailwindcss")({ config: "tailwind.config.js" })],
 });
+1

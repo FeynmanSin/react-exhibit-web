@@ -52,6 +52,9 @@ devDependencies:
   '@types/react-dom':
     specifier: ^18.2.4
     version: registry.npmjs.org/@types/react-dom@18.2.4
+  '@types/spark-md5':
+    specifier: ^3.0.2
+    version: registry.npmjs.org/@types/spark-md5@3.0.2
   tailwindcss:
     specifier: ^3.3.2
     version: registry.npmjs.org/tailwindcss@3.3.2
@@ -2947,6 +2950,12 @@ packages:
     name: '@types/semver'
     version: 7.5.0
     dev: false
+
+  registry.npmjs.org/@types/spark-md5@3.0.2:
+    resolution: {integrity: sha512-82E/lVRaqelV9qmRzzJ1PKTpyrpnT7mwdneKNJB9hUtypZDMggloDfFUCIqRRx3lYRxteCwXSq9c+W71Vf0QnQ==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/spark-md5/-/spark-md5-3.0.2.tgz}
+    name: '@types/spark-md5'
+    version: 3.0.2
+    dev: true
 
   registry.npmjs.org/@types/use-sync-external-store@0.0.3:
     resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==, registry: https://registry.npmjs.com/, tarball: https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz}
